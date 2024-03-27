@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #ffeeff;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin-top: 20px;
+            width: 300px; /* Lebar form */
+            margin: 0 auto; /* Pusatkan form secara horizontal */
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #800064;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #800064;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 12px); /* Kurangi 12px untuk mengompensasi padding */
+            padding: 5px;
+            border: 1px solid #800064;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 10px; /* Jarak antara input fields */
+        }
+        input[type="submit"] {
+            background-color: #800064;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #800064;
+        }
+        /* Gaya untuk gambar dan teks di bawahnya */
+        .login-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-container img {
+            width: 100%;
+            max-width: 300px; /* Lebar maksimum gambar */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .login-container p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #800064;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="download.jpeg" alt="Login Image">
+        <p>Hai, fa! Silakan login, ada sesuatu untukmu.</p>
+    </div>
+    <form onsubmit="return submitMessage()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Log In">
+        <p id="message" style="display: none;"></p>
+    </form>
+
+    <script>
+        function submitMessage() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "anaksuroboyo" && password === "facantik2024") {
+                document.getElementById("message").innerHTML = "Login successful!";
+                document.getElementById("message").style.color = "green";
+                document.getElementById("message").style.display = "block";
+                setTimeout(function() {
+                    window.location.href = "beranda.html";
+                }, 3000);
+            } else {
+                document.getElementById("message").innerHTML = "Login failed. Please try again.";
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").style.display = "block";
+                return false;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

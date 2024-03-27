@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffcccc; /* Latar belakang pink */
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        /* Gaya untuk konten gambar */
+        .image-container {
+            margin-top: 10px;
+            position: relative; /* Memastikan posisi absolut terhadap kontainer induk */
+        }
+        .image-container img {
+            max-width: 300px; /* Maksimum lebar gambar */
+            max-height: 300px; /* Maksimum tinggi gambar */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            position: relative; /* Memastikan posisi absolut terhadap gambar */
+            display: block; /* Memastikan gambar ditampilkan sebagai blok untuk menggunakan properti margin */
+            margin: 0 auto; /* Pusatkan gambar secara horizontal */
+        }
+        .image-description {
+            color: #ff69b4; /* Warna teks pink */
+            font-style: italic;
+            margin-top: 10px;
+        }
+        h3 {
+            color: #a5377b; /* Warna teks ungu */
+            font-weight: bold;
+        }
+        /* Bayangan di belakang gambar */
+        .image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(128, 0, 128, 0.3); /* Warna bayangan (warna ungu dengan opacity 0.3) */
+            border-radius: 5px;
+            z-index: -1; /* Menempatkan bayangan di bawah gambar */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GOOD NIGHT</h1>
+        <div class="image-container">
+            <img src="fa.jpg" alt="Gambar" />
+            <p class="image-description">Selamat malam ibuk zuhrufaaa dengan ini saya memiliki maksud dan tujuan,
+                 jika dinda tidak keberatan boleh kan kakanda memintak kontak wa nya,jika setuju boleh kirim kan di ig kontak nya</p>
+            <h3>SALAM DARI ANAK RIAU</h3>
+        </div>
+        <a href="tengku.html"></a>
+    </div>
+</body>
+</html>
